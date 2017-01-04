@@ -1,0 +1,15 @@
+#packages needed to run CVSchwab
+
+Flask==0.11.1
+Flask-Bootstrap==3.3.7.0
+Flask-Login==0.3.2
+Flask-Mail==0.9.1
+flask-nav==0.5
+Flask-Principal==0.4.0
+Flask-Script==2.0.5
+Flask-Security==1.7.5
+Flask-WTF==0.13
+Jinja2==2.8
+numpy # ==1.11.1
+Werkzeug==0.11.11
+WTForms==2.1

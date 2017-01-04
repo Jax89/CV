@@ -1,0 +1,279 @@
+{% extends 'master.html' %}
+
+{% block contentB %}
+<div class="well">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<ul class="nav nav-pills nav-justified">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">Programming</a></li>
+			<li data-target="#myCarousel" data-slide-to="1" ><a href="#">Web</a></li>
+			<li data-target="#myCarousel" data-slide-to="2"><a href="#">Operating systems</a></li>
+			<li data-target="#myCarousel" data-slide-to="3"><a href="#">Databases</a></li>
+			<li data-target="#myCarousel" data-slide-to="4"><a href="#">Wet lab speciality</a></li>
+			<li data-target="#myCarousel" data-slide-to="5"><a href="#">Languages</a></li>
+			<li data-target="#myCarousel" data-slide-to="6"><a href="#">MS Office</a></li>
+		</ul>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>Coding Language</th>
+						<th>Level</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Python</td>
+						<td>advanced</td>
+					</tr>
+					<tr>
+						<td>Java</td>
+						<td>intermediate</td>
+					</tr>
+					<tr>
+						<td>JavaScript</td>
+						<td>advanced</td>
+					</tr>
+					<tr>
+						<td>R</td>
+						<td>advanced</td>
+					</tr>
+					<tr>
+						<td>C#</td>
+						<td>basic</td>
+					</tr>
+					<tr>
+						<td>Delphi</td>
+						<td>basic</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- End Item -->
+			<div class="item">
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>Tool/Language</th>
+						<th>Level</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>HTML5</td>
+						<td>advanced</td>
+					</tr>
+					<tr>
+						<td>CSS</td>
+						<td>intermediate</td>
+					</tr>
+					<tr>
+						<td>Bootstrap</td>
+						<td>advanced</td>
+					</tr>
+					<tr>
+						<td>jQuery</td>
+						<td>advanced</td>
+					</tr>
+					<tr>
+						<td>Flask microframework</td>
+						<td>advanced</td>
+					</tr>
+					<tr>
+						<td>Jinja2 templating engine</td>
+						<td>advanced</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- End Item -->
+			<div class="item">
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>Operating systems</th>
+						<th>Level</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Linux</td>
+						<td>advanced</td>
+					</tr>
+					<tr>
+						<td>Windows</td>
+						<td>advanced</td>
+					</tr>
+					<tr>
+						<td>Unix</td>
+						<td>intermediate</td>
+					</tr>
+					<tr>
+						<td>Android</td>
+						<td>basic</td>
+					</tr>
+					<tr>
+						<td>iOS</td>
+						<td>basic</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- End Item -->
+			<div class="item">
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>Database System</th>
+						<th>Level</th>
+						<th>Further details</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>SQL</td>
+						<td>intermediate</td>
+						<td>based on postgresql,  in combination with SQL-Alchemy</td>
+					</tr>
+					<tr>
+						<td>MongoDB</td>
+						<td>intermediate</td>
+						<td>in combination with mongoengine</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- End Item -->
+			<div class="item">
+				<br/>
+					<ul>
+						<li>Cell culture - human, yeast, bacterial</li><br/>
+						<li>Isolation of protein complexes by affinity chromatography</li><br/>
+						<li>Electron microscopy - negative stain, single particle reconstruction from EM data</li><br/>
+						<li>Mouse brain dissection</li><br/>
+						<li>handling of human blood/tissue - DNA/RNA isolation, cryostats</li><br/>
+						<li>working under inert conditions, Schlenk line</li><br/>
+						<li>nano-chemistry: preparation of organic-inorganic hybrid perovskite, x-ray crystallography, powder diffraction</li>
+					</ul>
+					</tbody>
+				</table>
+			</div>
+			<!-- End Item -->
+			<div class="item">
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>Language</th>
+						<th>Level</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>German</td>
+						<td>native speaker</td>
+					</tr>
+					<tr>
+						<td>English</td>
+						<td>fluent</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- End Item -->
+			<div class="item">
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>Software</th>
+						<th>Level</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Word</td>
+						<td>advanced</td>
+					</tr>
+					<tr>
+						<td>Excel</td>
+						<td>advanced</td>
+					</tr>
+					<tr>
+						<td>Outlook</td>
+						<td>intermediate</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- End Item -->
+		</div>
+		<!-- End Carousel Inner -->
+	</div>
+</div>
+<!-- End Carousel -->
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+<script>
+$(document).ready( function() {
+    $('#myCarousel').carousel({
+    	interval:   false
+	});
+
+	var clickEvent = false;
+
+	$('#myCarousel').on('click', '.nav a', function() {
+		if(!clickEvent){
+			$('.nav li').removeClass('active');
+			$(this).parent().addClass('active');
+		}
+	}).on('slid.bs.carousel', function(e) {
+		clickEvent = true;
+		if(!clickEvent) {
+			var count = $('.nav').children().length -1;
+			var current = $('.nav li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.nav li').first().addClass('active');
+			}
+		}
+		clickEvent = false;
+	});
+});
+
+</script>
+{% endblock %}
+
+
+{% block styles %}
+{{super()}}
+<link rel=stylesheet type=text/css href="{{url_for('static', filename='level.css') }}">
+<style>
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 250px;
+  height: 250px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 125px;
+</style>
+{% endblock %}

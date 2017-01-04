@@ -1,0 +1,46 @@
+{% extends 'master.html' %}
+
+{% block contentB %}
+<div class="well">
+	<table class="table table-striped">
+		<thead>
+		<tr>
+			<th>Name</th>
+			<th>Role</th>
+			<th>Email</th>
+			<th>Phone</th>
+			<th>Address</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>Dr. Philipp Baaske</td>
+			<td>CEO NanoTemper technologies</td>
+			<td><a href="mailto:philipp.baaske@nanotemper.de">philipp.baaske@nanotemper.de</a></td>
+			<td>+49-89-452289510</td>
+			<td>Flössergasse 4, 81369 Munich, Germany</td>
+		</tr>
+		<tr>
+			<td>Dr. Bianca Habermann</td>
+			<td>Supervisor master thesis</td>
+			<td><a href="mailto:habermann@biochem.mpg.de">habermann@biochem.mpg.de</a></td>
+			<td>+49-89-85782442</td>
+			<td>Max-Planck-Institute of Biochemistry, Am Klopferspitz 18, 82152 Martinsried, Germany</td>
+		</tr>
+		<tr>
+			<td>Dr. Maya Topf</td>
+			<td>Supervisor Internship at Institute of Structural and Molecular Biology</td>
+			<td><a href="mailto:m.topf@cryst.bbk.ac.uk">m.topf@cryst.bbk.ac.uk</a></td>
+			<td>+44-20-70790886</td>
+			<td>University of London, Malet Street, London WC1E 7HX, UK</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<style>
+</style>
+{% endblock %}

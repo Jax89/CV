@@ -1,0 +1,92 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/utils.html" as util %}
+
+
+{% block head %}
+    {{super()}}
+    <!-- In Order to make it possible to use jqery.ready befor jqery is loaded,
+    a function in the head is defined to create a array of all jqery.ready handlers which are saved and executed after jqery load! The reason we need this is, that some jinja macros
+    contain scripts which make use of jqery. Since these scripts will be inline after rendering the template and are executed befor jqery is loaded, we use this kind of hacky way.
+    See: http://writing.colin-gourlay.com/safely-using-ready-before-including-jquery/ -->
+    <script>
+        (function (w, d, u) {
+
+            // Define two queues for handlers
+            w.readyQ = [];
+            w.bindReadyQ = [];
+
+            // Push a handler into the correct queue
+            function pushToQ(x, y) {
+                if (x == "ready") {
+                    w.bindReadyQ.push(y);
+                } else {
+                    w.readyQ.push(x);
+                }
+            }
+
+            // Define an alias object (for use later)
+            var alias = {
+                ready: pushToQ,
+                bind: pushToQ
+            };
+
+            // Define the fake jQuery function to capture handlers
+            w.$ = w.jQuery = function (handler) {
+                if (handler === d || handler === u) {
+                    // Queue $(document).ready(handler), $().ready(handler)
+                    // and $(document).bind("ready", handler) by returning
+                    // an object with alias methods for pushToQ
+                    return alias;
+                } else {
+                    // Queue $(handler)
+                    pushToQ(handler);
+                }
+            }
+
+        })(window, document);
+    </script>
+
+{% endblock %}
+
+
+{% block navbar %}
+    {{nav.top.render(renderer='CustomBootstrapRenderer')}}
+{% endblock %}
+
+
+{% block content %}
+    <!-- all glyphicons can be found from http://glyphicons.com/ -->
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                {{util.flashed_messages(dismissible=True, container=False) }}
+            </div>
+        </div>
+
+        {% block contentB %}{% endblock %}
+    </div>
+{% endblock %}
+
+
+{% block styles %}
+    {{super()}}
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block scripts %}
+    {{super()}}
+
+    <script>
+        <!--now all by the header script stashed jqery.ready handlers are executed since Jqery is loaded inside the jinja super()-->
+        (function ($, doc) {
+            $.each(readyQ, function (index, handler) {
+                $(handler);
+            });
+            $.each(bindReadyQ, function (index, handler) {
+                $(doc).bind("ready", handler);
+            });
+        })(jQuery, document);
+    </script>
+
+{% endblock %}

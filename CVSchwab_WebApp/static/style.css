@@ -1,0 +1,21 @@
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.page-header{
+    color :  #777;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid  #777;
+}
+body {
+font-family: sans-serif; background: #808080 !important;
+}
+
+body { padding-top: 70px; }
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
+  background-color: #080808;
+}
+

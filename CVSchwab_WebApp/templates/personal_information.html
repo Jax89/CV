@@ -1,0 +1,59 @@
+{% extends 'master.html' %}
+
+{% block contentB %}
+<div class="row">
+	<div class="col-xs-12 col-sm-offset-1 col-md-offset-1 col-sm-7 col-md-7">
+		<div class="well well-sm">
+			<div class="row">
+				<div class="col-sm-6 col-md-4">
+					<img src="https://www.pythonanywhere.com/user/JSchwab/files/home/JSchwab/JS_photograph.jpg" alt="" class="img-rounded img-responsive" />
+				</div>
+				<div class="col-sm-6 col-md-8">
+					<h4>
+						Jannik Schwab</h4>
+					<small><cite title="Munich, Germany">Munich, Germany <i class="glyphicon glyphicon-map-marker">
+					</i></cite></small>
+					<p>
+						<i class="glyphicon glyphicon-envelope"></i><a href='mailto:schw.jannik@gmail.com'>schw.jannik@gmail.com</a>
+						<br />
+						<i class="glyphicon glyphicon-phone"></i>+49 17680559640
+						<br />
+						<i class="glyphicon glyphicon-globe"></i><a href="http://www.cv-schwab.de">www.cv-schwab.de</a>
+						<br />
+						<i class="glyphicon glyphicon-gift"></i>August 05, 1989 in Friedrichshafen, Germany
+					</p>
+
+					<!-- Split button -->
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary">
+							Social</button>
+						<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+							<span class="caret"></span><span class="sr-only">Social</span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="https://www.facebook.com/jannik.schwab.9">Facebook</a></li>
+							<li><a href="https://www.xing.com/profile/Jannik_Schwab3">Xing</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-4 col-md-4">
+		<div class="panel panel-default">
+		  <div class="panel-heading">About this website</div>
+		  <div class="panel-body">
+			  Welcome to my personal CV website. Feel free to explore and learn more about my scientific career.
+			  This site was created using Flask (Python micro framework),
+			  Jinja2 templating engine, Bootstrap and JavaScript/jQery.
+		  </div>
+		</div>
+	</div>
+
+</div>
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel=stylesheet type=text/css href="{{url_for('static', filename='profile.css') }}">
+{% endblock %}
